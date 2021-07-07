@@ -3,8 +3,6 @@
   --main-color: #757575;
   --acent-color: #2196f3;
   --main-text-font: 'Roboto', sans-serif;
-  --time-animation: 250ms;
-  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* сброс */
 h1,
@@ -68,16 +66,14 @@ body {
 }
 
 /* ============= навигация ========== */
-/* .header {
-  border-bottom: 1px solid #ececec;
-  background-color: #ffffff; }   почему не работает? */
-
+.header {
+  border: 1px solid #ececec;
+  background-color: #ffffff;
+}
 .header-conteiner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ececec;
-  background-color: #ffffff;
 }
 
 .nav {
@@ -118,26 +114,9 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
-  transition: color var(--time-animation) var(--cubic-bezier);
 }
 .nav-list .link.current {
   color: var(--acent-color);
-}
-
-.nav .item {
-  position: relative;
-}
-
-.link.current::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 4px;
-  background-color: var(--acent-color);
-  border-radius: 4px;
-  margin-bottom: 0%;
 }
 
 .contact .link {
@@ -146,7 +125,6 @@ body {
   padding-bottom: 32px;
   display: flex;
   align-items: center;
-  transition: color var(--time-animation) var(--cubic-bezier);
 }
 
 .nav-list .link:hover,
@@ -161,7 +139,6 @@ body {
 .contact-icon {
   fill: var(--main-color);
   margin-right: 10px;
-  transition: fill var(--time-animation) var(--cubic-bezier);
 }
 
 .contact .link:hover .contact-icon,
@@ -220,7 +197,6 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color var(--time-animation) var(--cubic-bezier);
 }
 
 .hero-btn:hover {
@@ -239,7 +215,6 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--title-color);
-  margin-bottom: 10px;
 }
 
 .identity-list {
@@ -257,6 +232,7 @@ body {
 
 .identity-list p {
   line-height: 1.71;
+  margin-top: 10px;
 }
 
 .conteiner-icon {
@@ -289,25 +265,6 @@ body {
 }
 .work-list .item:not(:last-child) {
   margin-right: 30px;
-}
-
-.work-list .item {
-  position: relative;
-}
-
-.work-list .description {
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  font-weight: 700;
-  line-height: 1.14;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: rgba(47, 48, 58, 0.8);
-  padding-top: 27px;
-  padding-bottom: 27px;
 }
 
 .command {
@@ -344,12 +301,12 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  margin-bottom: 16px;
 }
 
 .command .social-link-list {
   display: flex;
   justify-content: space-between;
+  margin-top: 16px;
 }
 
 .command .socail-link {
@@ -361,9 +318,6 @@ body {
   align-items: center;
   justify-content: center;
   fill: #b8afaf;
-  transition-property: fill, background-color;
-  transition-duration: var(--time-animation);
-  transition-timing-function: var(--cubic-bezier);
 }
 
 .social-link-icon {
@@ -399,9 +353,6 @@ body {
   align-items: center;
   justify-content: center;
   fill: #afb1b8;
-  transition-property: fill, border-color;
-  transition-duration: var(--time-animation);
-  transition-timing-function: var(--cubic-bezier);
 }
 
 .clients-link:hover,
@@ -418,18 +369,18 @@ body {
 
 .footer-content {
   display: flex;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  align-items: baseline;
 }
 
 .footer .left-size {
   display: flex;
   flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
   min-width: 206px;
 }
 
 .footer .right-size {
+  margin-top: 72px;
   margin-left: 70px;
 }
 
@@ -446,7 +397,6 @@ body {
   font-style: normal;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
-  transition: color 250ms var(--cubic-bezier);
 }
 
 .address .item:not(:last-child) {
@@ -477,9 +427,6 @@ body {
   align-items: center;
   justify-content: center;
   fill: #b8afaf;
-  transition-property: fill, background-color;
-  transition-duration: var(--time-animation);
-  transition-timing-function: var(--cubic-bezier);
 }
 
 .footer .socail-link:hover,
@@ -520,9 +467,6 @@ body {
   padding: 9px 22px;
   border: transparent;
   border-radius: 4px;
-  transition-property: color, background-color, box-shadow;
-  transition-duration: var(--time-animation);
-  transition-timing-function: var(--cubic-bezier);
 }
 
 .btn-item:focus,
@@ -560,9 +504,6 @@ body {
   margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
-  transition-property: box-shadow;
-  transition-duration: var(--time-animation);
-  transition-timing-function: var(--cubic-bezier);
 }
 .card .item:nth-child(3n) {
   margin-right: 0px;
@@ -606,36 +547,4 @@ body {
 .card-list .item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.card-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.preview-card {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  margin-top: 0;
-  padding: 24px;
-  font-size: 18px;
-  line-height: 1.56;
-  color: #ffffff;
-  background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
-  transition-property: opacity, transform;
-  transition-duration: var(--time-animation);
-  transition-timing-function: var(--cubic-bezier);
-  opacity: 0;
-}
-
-.card-list .item:focus .preview-card,
-.card-list .item:hover .preview-card {
-  opacity: 1;
-  transform: translateY(0);
 }
